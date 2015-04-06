@@ -22,3 +22,11 @@ Route::controllers([
 
 Route::get('/TrashSure', 'MainController@index');
 Route::get('/inventory', 'MainController@inventory');
+
+Route::get('/add', 'AddController@getAddTPA');
+Route::post('/add', 'AddController@postAddTPA');
+
+// TPA
+// Route::group(['prefix' => '/tpa'], function() {
+// 	Route::get('/add','AddController@getAddTPA');
+// });
