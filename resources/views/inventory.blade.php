@@ -46,7 +46,7 @@
                             <button type="button" class="btn btn-sm btn-primary" onclick="redirect();">Add TPA</button>
                                 <script type="text/javascript">
                                 function redirect(){
-                                    window.location = "{{url('add')}}";
+                                    window.location = "{{url('addTPA')}}";
                                 }
                                 </script>
                         </div>
@@ -72,7 +72,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-sm btn-primary">Add TPS</button>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="redirect2();">Add TPS</button>
+                            <script type="text/javascript">
+                                function redirect2(){
+                                    window.location = "{{url('addTPS')}}";
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -100,7 +105,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-sm btn-primary">Add Sarana</button>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="redirect3();">Add Sarana</button>
+                            <script type="text/javascript">
+                                function redirect3(){
+                                    window.location = "{{url('addSarana')}}";
+                                }
+                            </script>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -126,7 +136,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-sm btn-primary">Add Petugas</button>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="redirect4();">Add Petugas</button>
+                            <script type="text/javascript">
+                                function redirect4(){
+                                    window.location = "{{url('addPetugas')}}";
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>

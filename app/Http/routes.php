@@ -23,8 +23,17 @@ Route::controllers([
 Route::get('/TrashSure', 'MainController@index');
 Route::get('/inventory', 'MainController@inventory');
 
-Route::get('/add', 'AddController@getAddTPA');
-Route::post('/add', 'AddController@postAddTPA');
+Route::get('/addTPA', 'AddController@getAddTPA');
+Route::post('/addTPA', 'AddController@postAddTPA');
+
+Route::get('/addTPS', 'AddController@getAddTPS');
+Route::post('/addTPS', 'AddController@postAddTPS');
+
+Route::get('/addSarana', 'AddController@getAddSarana');
+Route::post('/addSarana', 'AddController@postAddSarana');
+
+Route::get('/addPetugas', 'AddController@getAddPetugas');
+Route::post('/addPetugas', 'AddController@postAddPetugas');
 
 // TPA
 // Route::group(['prefix' => '/tpa'], function() {

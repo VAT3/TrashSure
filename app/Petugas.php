@@ -16,8 +16,9 @@ class Petugas extends Model {
 	//  *
 	//  * @var array
 	//  */
-	// protected $fillable = ['name', 'email', 'password'];
-
+	protected $fillable = ['nama', 'nip', 'pekerjaan', 'username', 'password'];
+	public $timestamps = false;
+	
 	// /**
 	//  * The attributes excluded from the model's JSON form.
 	//  *

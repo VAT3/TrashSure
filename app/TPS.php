@@ -16,7 +16,8 @@ class TPS extends Model {
 	//  *
 	//  * @var array
 	//  */
-	// protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['nama', 'lokasi'];
+	public $timestamps = false;
 
 	// /**
 	//  * The attributes excluded from the model's JSON form.
