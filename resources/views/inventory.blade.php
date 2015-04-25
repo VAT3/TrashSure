@@ -32,6 +32,7 @@
                                         <th>Nama</th>
                                         <th>Lokasi</th>
                                         <th> - </th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -63,6 +64,7 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
+                                        <th> - </th>
                                         <th> - </th>
                                     </tr>
                                 </thead>
@@ -100,6 +102,7 @@
                                         <th>Jenis</th>
                                         <th>Plat</th>
                                         <th> - </th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -131,6 +134,7 @@
                                         <th>Nama</th>
                                         <th>NIP</th>
                                         <th>Pekerjaan</th>
+                                        <th> - </th>
                                         <th> - </th>
                                     </tr>
                                 </thead>

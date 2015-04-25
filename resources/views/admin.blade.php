@@ -18,16 +18,12 @@ Use : SB-Admin 1.0.2 template
     <title>TrashSure - Bandung first app for trash Management</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,12 +33,6 @@ Use : SB-Admin 1.0.2 template
     <![endif]-->
     
     <!-- Style -->
-    <?php
-    {{ HTML::style('css/bootstrap.min.css'); }}
-    {{ HTML::style('css/sb-admin.css'); }}
-    {{ HTML::style('css/plugins/morris.css'); }}
-    {{ HTML::style('font-awesome/css/font-awesome.min.css'); }}
-    ?>
 </head>
 
 <body>
