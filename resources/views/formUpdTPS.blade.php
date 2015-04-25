@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Update Form for Petugas
+                    Update Form for TPS
                 </h1>
                 <ol class="breadcrumb">
                     <li>
@@ -19,7 +19,7 @@
                         <i class="fa fa-table"></i>  <a href="{{url('inventory')}}">Inventory</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-edit"></i> UpdatePetugas
+                        <i class="fa fa-edit"></i> UpdateTPS
                     </li>
                 </ol>
             </div>
@@ -31,24 +31,12 @@
             <div class="col-lg-6">
             	<form method="post">
 	            	<div class="form-group">
-	                    <label>Nama Petugas</label>
-	                    <input class="form-control" name="nama" placeholder="<?php echo Session::get('namaPetugas'); ?>">
+	                    <label>Nama TPS</label>
+	                    <input class="form-control" name="nama" placeholder="<?php echo Session::get('namaTPS'); ?>">
 	                </div>
                     <div class="form-group">
-                        <label>NIP Petugas</label>
-                        <input class="form-control" name="nip" placeholder="<?php echo Session::get('NIP'); ?>">
-                    </div>
-                    <div class="form-group">
-                        <label>Pekerjaan Petugas</label>
-                        <input class="form-control" name="pekerjaan" placeholder="<?php echo Session::get('pekerjaan'); ?>">
-                    </div>
-	                <div class="form-group">
-	                    <label>Username</label>
-	                    <input class="form-control" name="username" placeholder="<?php echo Session::get('username'); ?>">
-	                </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input class="form-control" name="password">
+                        <label>Lokasi TPS</label>
+                        <input class="form-control" name="lokasi" placeholder="<?php echo Session::get('lokasiTPS'); ?>">
                     </div>
 	                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	                <button type="submit" class="btn btn-primary">Submit</button>

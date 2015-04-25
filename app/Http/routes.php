@@ -47,8 +47,8 @@ Route::post('/updTPS/{id}', 'UpdController@postUpdTPS');
 Route::get('/updSarana/{id}', 'UpdController@getUpdSarana');
 Route::post('/updSarana/{id}', 'UpdController@postUpdSarana');
 
-Route::get('/updPetugas', 'AddController@getAddPetugas');
-Route::post('/updPetugas', 'AddController@postAddPetugas');
+Route::get('/updPetugas/{id}', 'UpdController@getUpdPetugas');
+Route::post('/updPetugas/{id}', 'UpdController@postUpdPetugas');
 
 
 Route::get('/delTPA/{id}', 'DelController@DelTPA');

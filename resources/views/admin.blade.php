@@ -110,13 +110,13 @@ Use : SB-Admin 1.0.2 template
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="{{'TrashSure'}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="{{url('TrashSure')}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="charts.html"><i class="fa fa-fw fa-file-o"></i> Report</a>
                     </li>
                     <li>
-                        <a href="{{'inventory'}}"><i class="fa fa-fw fa-table"></i> Inventory</a>
+                        <a href="{{url('inventory')}}"><i class="fa fa-fw fa-table"></i> Inventory</a>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
@@ -133,23 +133,15 @@ Use : SB-Admin 1.0.2 template
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
-
-    <?php
-    {{ HTML::script('js/jquery.js'); }}
-    {{ HTML::script('js/bootstrap.min.js'); }}
-    {{ HTML::script('js/plugins/morris/raphael.min.js'); }}
-    {{ HTML::script('js/plugins/morris/morris.min.js'); }}
-    {{ HTML::script('js/plugins/morris/morris-data.js'); }}
-    ?>
+    <script src="{{asset('js/plugins/morris/raphael.min.js')}}"></script>
+    <script src="{{asset('js/plugins/morris/morris.min.js')}}"></script>
+    <script src="{{asset('js/plugins/morris/morris-data.js')}}"></script>
 </body>
 
 </html>

@@ -1,15 +1,19 @@
 <?php 
 namespace App\Http\Controllers;
 use Request;
+use Session;
 use App\TPA;
 use App\TPS;
 use App\Sarana;
 use App\Petugas;
 
 	class UpdController extends Controller {
-		public function getUpdTPA()
+		public function getUpdTPA($id)
 		{
-			return view('formUpdPetugas');
+			$tpa = TPA::find($id);
+			Session::put('namaTPA',$tpa->nama);
+			Session::put('lokasiTPA',$tpa->lokasi);
+			return view('formUpdTPA');
 		}
 		public function postUpdTPA()
 		{
@@ -20,8 +24,11 @@ use App\Petugas;
 			return redirect('inventory');
 		}
 
-		public function getUpdTPS()
+		public function getUpdTPS($id)
 		{
+			$tps = TPS::find($id);
+			Session::put('namaTPS',$tps->nama);
+			Session::put('lokasiTPS',$tps->lokasi);
 			return view('formUpdTPS');
 		}
 		public function postUpdTPS()
@@ -33,8 +40,11 @@ use App\Petugas;
 			return redirect('inventory');
 		}
 
-		public function getUpdSarana()
+		public function getUpdSarana($id)
 		{
+			$sarana = Sarana::find($id);
+			Session::put('jenisSarana',$sarana->jenis);
+			Session::put('platSarana',$sarana->plat);
 			return view('formUpdSarana');
 		}
 		public function postUpdSarana()
@@ -46,8 +56,14 @@ use App\Petugas;
 			return redirect('inventory');
 		}
 
-		public function getUpdPetugas()
+		public function getUpdPetugas($id)
 		{
+			$petugas = Petugas::find($id);
+			Session::put('namaPetugas',$petugas->nama);
+			Session::put('NIP',$petugas->nip);
+			Session::put('pekerjaan',$petugas->pekerjaan);
+			Session::put('username',$petugas->username);
+			
 			return view('formUpdPetugas');
 		}
 		public function postUpdPetugas()
