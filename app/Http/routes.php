@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -36,11 +38,20 @@ Route::get('/addPetugas', 'AddController@getAddPetugas');
 Route::post('/addPetugas', 'AddController@postAddPetugas');
 
 
+Route::get('/updTPA/{id}', 'UpdController@getUpdTPA');
+Route::post('/updTPA/{id}', 'UpdController@postUpdTPA');
+
+Route::get('/updTPS/{id}', 'UpdController@getUpdTPS');
+Route::post('/updTPS/{id}', 'UpdController@postUpdTPS');
+
+Route::get('/updSarana/{id}', 'UpdController@getUpdSarana');
+Route::post('/updSarana/{id}', 'UpdController@postUpdSarana');
+
+Route::get('/updPetugas', 'AddController@getAddPetugas');
+Route::post('/updPetugas', 'AddController@postAddPetugas');
+
+
 Route::get('/delTPA/{id}', 'DelController@DelTPA');
 Route::get('/delTPS/{id}', 'DelController@DelTPS');
 Route::get('/delSarana/{id}', 'DelController@DelSarana');
 Route::get('/delPetugas/{id}', 'DelController@DelPetugas');
-// TPA
-// Route::group(['prefix' => '/tpa'], function() {
-// 	Route::get('/add','AddController@getAddTPA');
-// });
