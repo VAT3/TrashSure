@@ -41,10 +41,7 @@
                                         <td>{{$tpa->nama}}</td>
                                         <td>{{$tpa->lokasi}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delTPA/'.$tpa->id}}"> Delete</a></td>
-<<<<<<< HEAD
-=======
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updTPA/'.$tpa->id}}"> Update</a></td>
->>>>>>> 5c60606c4150d504878e0da768d80903e4da772f
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -76,10 +73,7 @@
                                         <td>{{$tps->nama}}</td>
                                         <td>{{$tps->lokasi}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delTPS/'.$tps->id}}"> Delete</a></td>
-<<<<<<< HEAD
-=======
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updTPS/'.$tps->id}}"> Update</a></td>
->>>>>>> 5c60606c4150d504878e0da768d80903e4da772f
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -115,10 +109,7 @@
                                         <td>{{$sarana->jenis}}</td>
                                         <td>{{$sarana->plat}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delSarana/'.$sarana->id}}"> Delete</a></td>
-<<<<<<< HEAD
-=======
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updSarana/'.$sarana->id}}"> Update</a></td>
->>>>>>> 5c60606c4150d504878e0da768d80903e4da772f
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -150,10 +141,7 @@
                                         <td>{{$petugas->nip}}</td>
                                         <td>{{$petugas->pekerjaan}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delPetugas/'.$petugas->id}}"> Delete</a></td>
-<<<<<<< HEAD
-=======
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updPetugas/'.$petugas->id}}"> Update</a></td>
->>>>>>> 5c60606c4150d504878e0da768d80903e4da772f
                                     </tr>
                                     @endforeach
                                 </tbody>
