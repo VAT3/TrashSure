@@ -35,6 +35,11 @@ Route::post('/addSarana', 'AddController@postAddSarana');
 Route::get('/addPetugas', 'AddController@getAddPetugas');
 Route::post('/addPetugas', 'AddController@postAddPetugas');
 
+
+Route::get('/delTPA/{id}', 'DelController@DelTPA');
+Route::get('/delTPS/{id}', 'DelController@DelTPS');
+Route::get('/delSarana/{id}', 'DelController@DelSarana');
+Route::get('/delPetugas/{id}', 'DelController@DelPetugas');
 // TPA
 // Route::group(['prefix' => '/tpa'], function() {
 // 	Route::get('/add','AddController@getAddTPA');

@@ -7,7 +7,11 @@ use App\Petugas;
 	class MainController extends Controller {
 		public function index()
 		{
-			return view('overview');
+			$TPA = TPA::all();
+			$TPS = TPS::all();
+			$Sarana = Sarana::all();
+			$Petugas = Petugas::all();
+			return view('overview')->with('TPA', $TPA)->with('TPS', $TPS)->with('Sarana', $Sarana)->with('Petugas', $Petugas);
 		}
 		public function inventory()
 		{

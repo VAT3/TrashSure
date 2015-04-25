@@ -20,20 +20,20 @@
 
                 <div class="row">
                     <!-- Left -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-info-circle fa-5x"></i>
+                                        <i class="fa fa-trash fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">10</div>
-                                        <div>New Notifications!</div>
+                                        <div class="huge">{{count($TPA)}}</div>
+                                        <div>Jumlah TPA</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="{{'inventory'}}">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -44,20 +44,20 @@
                     </div>
 
                     <!-- 2nd Left -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
+                                        <i class="fa fa-trash fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">10</div>
-                                        <div>New Tasks!</div>
+                                        <div class="huge">{{count($TPS)}}</div>
+                                        <div>Jumlah TPS</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="{{'inventory'}}">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -68,20 +68,44 @@
                     </div>
 
                     <!-- 3rd Left -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-file-o fa-5x"></i>
+                                        <i class="fa fa-car fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
-                                        <div>New Data!</div>
+                                        <div class="huge">{{count($Sarana)}}</div>
+                                        <div>Jumlah Sarana</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="{{'inventory'}}">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4th Left -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-gear fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">{{count($Petugas)}}</div>
+                                        <div>Jumlah Petugas</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{'inventory'}}">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

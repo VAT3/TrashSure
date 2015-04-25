@@ -31,14 +31,16 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($TPA as $tpa)
                                     <tr>
-                                        <td>{{$tpa->id}}</td>
+                                        <td>TPA - {{$tpa->id}}</td>
                                         <td>{{$tpa->nama}}</td>
                                         <td>{{$tpa->lokasi}}</td>
+                                        <td><i class="fa fa-recycle"></i> <a href="{{'delTPA/'.$tpa->id}}"> Delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -60,14 +62,16 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($TPS as $tps)
                                     <tr>
-                                        <td>{{$tps->id}}</td>
+                                        <td>TPS - {{$tps->id}}</td>
                                         <td>{{$tps->nama}}</td>
                                         <td>{{$tps->lokasi}}</td>
+                                        <td><i class="fa fa-recycle"></i> <a href="{{'delTPS/'.$tps->id}}"> Delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -93,14 +97,16 @@
                                         <th>ID</th>
                                         <th>Jenis</th>
                                         <th>Plat</th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($Sarana as $sarana)
                                     <tr>
-                                        <td>{{$sarana->id}}</td>
+                                        <td>Sarana - {{$sarana->id}}</td>
                                         <td>{{$sarana->jenis}}</td>
                                         <td>{{$sarana->plat}}</td>
+                                        <td><i class="fa fa-recycle"></i> <a href="{{'delSarana/'.$sarana->id}}"> Delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -119,19 +125,19 @@
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nama</th>
                                         <th>NIP</th>
                                         <th>Pekerjaan</th>
+                                        <th> - </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($Petugas as $petugas)
                                     <tr>
-                                        <td>{{$petugas->id}}</td>
                                         <td>{{$petugas->nama}}</td>
                                         <td>{{$petugas->nip}}</td>
                                         <td>{{$petugas->pekerjaan}}</td>
+                                        <td><i class="fa fa-recycle"></i> <a href="{{'delPetugas/'.$petugas->id}}"> Delete</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
