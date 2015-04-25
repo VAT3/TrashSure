@@ -16,7 +16,7 @@
                         <i class="fa fa-dashboard"></i>  <a href="{{url('TrashSure')}}">Dashboard</a>
                     </li>
                     <li>
-                        <i class="fa fa-table"></i>  <a href="{{url('inventory')}}">Inventory</a>
+                        <i class="fa fa-table"></i>  <a href="{{url('inventoryTPS')}}">InventoryTPS</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-edit"></i> UpdateTPS

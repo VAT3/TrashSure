@@ -116,7 +116,21 @@ Use : SB-Admin 1.0.2 template
                         <a href="charts.html"><i class="fa fa-fw fa-file-o"></i> Report</a>
                     </li>
                     <li>
-                        <a href="{{url('inventory')}}"><i class="fa fa-fw fa-table"></i> Inventory</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Inventory <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="{{url('inventoryTPA')}}">TPA</a>
+                            </li>
+                            <li>
+                                <a href="{{url('inventoryTPS')}}">TPS</a>
+                            </li>
+                            <li>
+                                <a href="{{url('inventorySarana')}}">Sarana</a>
+                            </li>
+                            <li>
+                                <a href="{{url('inventoryPetugas')}}">Petugas</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>

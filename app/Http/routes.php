@@ -23,7 +23,10 @@ Route::controllers([
 ]);
 
 Route::get('/TrashSure', 'MainController@index');
-Route::get('/inventory', 'MainController@inventory');
+Route::get('/inventoryTPA', 'MainController@inventoryTPA');
+Route::get('/inventoryTPS', 'MainController@inventoryTPS');
+Route::get('/inventorySarana', 'MainController@inventorySarana');
+Route::get('/inventoryPetugas', 'MainController@inventoryPetugas');
 
 Route::get('/addTPA', 'AddController@getAddTPA');
 Route::post('/addTPA', 'AddController@postAddTPA');
