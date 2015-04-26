@@ -15,13 +15,13 @@ use App\Petugas;
 			Session::put('lokasiTPA',$tpa->lokasi);
 			return view('formUpdTPA');
 		}
-		public function postUpdTPA()
+		public function postUpdTPA($id)
 		{
 			$input = Request::all();
 			// return response($input);
-			$tpa = new TPA();
+			$tpa = TPA::find($id);
 			$tpa->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryTPA');
 		}
 
 		public function getUpdTPS($id)
@@ -31,13 +31,13 @@ use App\Petugas;
 			Session::put('lokasiTPS',$tps->lokasi);
 			return view('formUpdTPS');
 		}
-		public function postUpdTPS()
+		public function postUpdTPS($id)
 		{
 			$input = Request::all();
 			// return response($input);
-			$tps = new TPS();
+			$tps = TPS::find($id);
 			$tps->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryTPS');
 		}
 
 		public function getUpdSarana($id)
@@ -47,13 +47,13 @@ use App\Petugas;
 			Session::put('platSarana',$sarana->plat);
 			return view('formUpdSarana');
 		}
-		public function postUpdSarana()
+		public function postUpdSarana($id)
 		{
 			$input = Request::all();
 			// return response($input);
-			$sarana = new Sarana();
+			$sarana = Sarana::find($id);
 			$sarana->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventorySarana');
 		}
 
 		public function getUpdPetugas($id)
@@ -66,13 +66,13 @@ use App\Petugas;
 			
 			return view('formUpdPetugas');
 		}
-		public function postUpdPetugas()
+		public function postUpdPetugas($id)
 		{
 			$input = Request::all();
 			// return response($input);
-			$petugas = new Petugas();
+			$petugas = Petugas::find($id);
 			$petugas->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryPetugas');
 		}
 	}
 ?>

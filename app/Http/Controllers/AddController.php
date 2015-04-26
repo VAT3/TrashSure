@@ -17,7 +17,7 @@ use App\Petugas;
 			// return response($input);
 			$tpa = new TPA();
 			$tpa->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryTPA');
 		}
 
 		public function getAddTPS()
@@ -30,7 +30,7 @@ use App\Petugas;
 			// return response($input);
 			$tps = new TPS();
 			$tps->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryTPS');
 		}
 
 		public function getAddSarana()
@@ -43,7 +43,7 @@ use App\Petugas;
 			// return response($input);
 			$sarana = new Sarana();
 			$sarana->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventorySarana');
 		}
 
 		public function getAddPetugas()
@@ -56,7 +56,7 @@ use App\Petugas;
 			// return response($input);
 			$petugas = new Petugas();
 			$petugas->fill($input)->save();
-			return redirect('inventory');
+			return redirect('inventoryPetugas');
 		}
 	}
 ?>

@@ -10,25 +10,25 @@ use App\Petugas;
 		public function DelTPA($id){
 			$tpa = TPA::find($id);
 			$tpa->delete();
-			return redirect('inventory');	
+			return redirect('inventoryTPA');	
 		}
 
 		public function DelTPS($id){
 			$tps = TPS::find($id);
 			$tps->delete();
-			return redirect('inventory');	
+			return redirect('inventoryTPS');	
 		}
 
 		public function DelSarana($id){
 			$sarana = Sarana::find($id);
 			$sarana->delete();
-			return redirect('inventory');	
+			return redirect('inventorySarana');	
 		}
 
 		public function DelPetugas($id){
 			$petugas = Petugas::find($id);
 			$petugas->delete();
-			return redirect('inventory');	
+			return redirect('inventoryPetugas');	
 		}
 	}
 ?>

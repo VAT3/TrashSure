@@ -12,7 +12,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-info-circle"></i> Overview
+                                <i class="fa fa-info-circle"></i> Welcome Back <?php echo Session::get('name')?>
                             </li>
                         </ol>
                     </div>

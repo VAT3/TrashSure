@@ -7,6 +7,9 @@ use App\Petugas;
 	class MainController extends Controller {
 		public function index()
 		{
+			return view('login');
+		}
+		public function home(){
 			$TPA = TPA::all();
 			$TPS = TPS::all();
 			$Sarana = Sarana::all();

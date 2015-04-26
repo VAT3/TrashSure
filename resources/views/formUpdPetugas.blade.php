@@ -48,7 +48,7 @@
 	                </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input class="form-control" name="password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="<?php echo Session::get('password'); ?>">
                     </div>
 	                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	                <button type="submit" class="btn btn-primary">Submit</button>

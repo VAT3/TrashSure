@@ -29,23 +29,27 @@
             	<form method="post">
 	            	<div class="form-group">
 	                    <label>Nama Petugas</label>
-	                    <input class="form-control" name="nama" placeholder="Contoh : Kaito">
+	                    <input class="form-control" id='nama' name="nama" placeholder="Contoh : Kaito">
 	                </div>
                     <div class="form-group">
                         <label>NIP Petugas</label>
-                        <input class="form-control" name="nip" placeholder="Contoh : 13512034">
+                        <input class="form-control" id='nip' name="nip" placeholder="Contoh : 13512034">
                     </div>
                     <div class="form-group">
                         <label>Pekerjaan Petugas</label>
-                        <input class="form-control" name="pekerjaan" placeholder="Contoh : Bos">
+                        <input class="form-control" id='pekerjaan' name="pekerjaan" placeholder="Contoh : Bos">
                     </div>
 	                <div class="form-group">
 	                    <label>Username</label>
-	                    <input class="form-control" name="username">
+	                    <input class="form-control" id='username' name="username">
 	                </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input class="form-control" name="password">
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label>Ulangi Password</label>
+                        <input type="password" class="form-control" id="passwordcheck" name="passwordcheck">
                     </div>
 	                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	                <button type="submit" class="btn btn-primary">Submit</button>

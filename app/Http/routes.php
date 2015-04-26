@@ -13,16 +13,18 @@
 
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'MainController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('/index', 'MainController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('/TrashSure', 'MainController@index');
+Route::post('login','LoginController@login');
+
+Route::get('/TrashSure', 'MainController@home');
 Route::get('/inventoryTPA', 'MainController@inventoryTPA');
 Route::get('/inventoryTPS', 'MainController@inventoryTPS');
 Route::get('/inventorySarana', 'MainController@inventorySarana');
