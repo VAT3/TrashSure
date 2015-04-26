@@ -23,6 +23,7 @@ Route::controllers([
 ]);
 
 Route::post('login','LoginController@login');
+Route::get('logout','LoginController@logout');
 
 Route::get('/TrashSure', 'MainController@home');
 Route::get('/inventoryTPA', 'MainController@inventoryTPA');

@@ -5,6 +5,10 @@ use App\TPS;
 use App\Sarana;
 use App\Petugas;
 	class MainController extends Controller {
+		public function __construct()
+		{
+			$this->middleware('login', ['except' => ['index']]);
+		}
 		public function index()
 		{
 			return view('login');
