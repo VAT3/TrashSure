@@ -110,13 +110,13 @@ Use : SB-Admin 1.0.2 template
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="{{url('TrashSure')}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="{{url('TrashSure')}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard </a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-file-o"></i> Report</a>
+                        <a href="charts.html"><i class="fa fa-fw fa-file-o"></i> Laporan </a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Inventory <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Inventori <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="{{url('inventoryTPA')}}">TPA</a>
@@ -133,10 +133,7 @@ Use : SB-Admin 1.0.2 template
                         </ul>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-calendar"></i> Schedule</a>
+                        <a href="{{url('schedule')}}"><i class="fa fa-fw fa-calendar"></i> Assign Schedule </a>
                     </li>
                 </ul>
             </div>

@@ -25,12 +25,16 @@ Route::controllers([
 Route::post('login','LoginController@login');
 Route::get('logout','LoginController@logout');
 
+// MENU
 Route::get('/TrashSure', 'MainController@home');
 Route::get('/inventoryTPA', 'MainController@inventoryTPA');
 Route::get('/inventoryTPS', 'MainController@inventoryTPS');
 Route::get('/inventorySarana', 'MainController@inventorySarana');
 Route::get('/inventoryPetugas', 'MainController@inventoryPetugas');
+Route::get('/schedule', 'MainController@schedule');
+Route::get('/assignSchedule', 'MainController@postAssignSchedule');
 
+//ADD
 Route::get('/addTPA', 'AddController@getAddTPA');
 Route::post('/addTPA', 'AddController@postAddTPA');
 
@@ -43,7 +47,7 @@ Route::post('/addSarana', 'AddController@postAddSarana');
 Route::get('/addPetugas', 'AddController@getAddPetugas');
 Route::post('/addPetugas', 'AddController@postAddPetugas');
 
-
+//UPD
 Route::get('/updTPA/{id}', 'UpdController@getUpdTPA');
 Route::post('/updTPA/{id}', 'UpdController@postUpdTPA');
 
@@ -56,8 +60,10 @@ Route::post('/updSarana/{id}', 'UpdController@postUpdSarana');
 Route::get('/updPetugas/{id}', 'UpdController@getUpdPetugas');
 Route::post('/updPetugas/{id}', 'UpdController@postUpdPetugas');
 
-
+//DEL
 Route::get('/delTPA/{id}', 'DelController@DelTPA');
 Route::get('/delTPS/{id}', 'DelController@DelTPS');
 Route::get('/delSarana/{id}', 'DelController@DelSarana');
 Route::get('/delPetugas/{id}', 'DelController@DelPetugas');
+
+//ASSIGN JADWAL

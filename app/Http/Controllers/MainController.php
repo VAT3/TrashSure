@@ -4,6 +4,8 @@ use App\TPA;
 use App\TPS;
 use App\Sarana;
 use App\Petugas;
+use App\Jadwal;
+use Carbon\Carbon;
 	class MainController extends Controller {
 		public function __construct()
 		{
@@ -51,6 +53,23 @@ use App\Petugas;
 			$Sarana = Sarana::all();
 			$Petugas = Petugas::all();
 			return view('inventoryPetugas')->with('TPA', $TPA)->with('TPS', $TPS)->with('Sarana', $Sarana)->with('Petugas', $Petugas);
+		}
+		public function schedule(){
+			$Jadwal = Jadwal::all();
+			$Petugas = Petugas::all();
+			$mytime = Carbon::now()->toDateString();
+			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
+		}
+		public function postAssignSchedule(){
+			$Jadwal = Jadwal::all();
+			$Petugas = Petugas::all();
+			$mytime = Carbon::now()->toDateString();
+			$TPA = TPA::all();
+			$TPS = TPS::all();
+			$Sarana = Sarana::all();
+			$Petugas = Petugas::all();
+			// return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
+			return view('overview')->with('TPA', $TPA)->with('TPS', $TPS)->with('Sarana', $Sarana)->with('Petugas', $Petugas);
 		}
 	}
 ?>
