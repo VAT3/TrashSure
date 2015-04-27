@@ -58,16 +58,16 @@ use Request;
 		public function schedule(){
 			$Jadwal = Jadwal::all();
 			$Petugas = Petugas::all();
-			$mytime = Carbon::now()->toDateString();
+			$mytime = Carbon::now()->addDay()->toDateString();
 			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas)->with('Jadwal', $Jadwal);
 		}
 		public function postAssignSchedule(){
-			$input = array();
 			$input = Request::all();
 			$jadwal = new Jadwal();
 			$jadwal->fill($input)->save();
-			// return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
-			return $input;
+			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
+			// return response($input);
+			// return view('login');
 		}
 	}
 ?>

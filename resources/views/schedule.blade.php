@@ -39,33 +39,33 @@
                         <tbody>
                             @for ($i = 0; $i < 24; $i++)
                             <tr>
-                                <td>{{$Date}}</td>
-                                <td>{{$i}}:00</td>
-                                @if ($i == 23)
-                                <td>00:00</td>
-                                @else
-                                <td>{{$i+1}}:00</td>
-                                @endif
-                                <td>
-                                    <form role="form" method="post" action="/assignSchedule">
-                                    <input name="_token" hidden value="{!! csrf_token() !!}" />
-                                            <div class="form-group">
-                                                <!-- <select name="petugas[]" class="form-control">
-                                                    <option>Petugas</option>
-                                                    @foreach($Petugas as $petugas)
-                                                    <option>{{$petugas->nama}}</option>
-                                                    @endforeach
-                                                </select> -->
-                                                <input type="input" class="form-control" id="username" placeholder="Enter username" name="username">
-                                            </div>
+                                <form role="form" method="post" action="/assignSchedule">
+                                <input name="_token" hidden value="{!! csrf_token() !!}" />
+                                    <td><input type="input" class="form-control" name="tanggal" value={{$Date}} readonly></td>
+                                    <td><input type="input" class="form-control" name="waktuMulai" value="{{$i}}:00" readonly></td>
+                                    @if ($i == 23)
+                                    <td><input type="input" class="form-control" name="waktuSelesai" value="0:00" readonly></td>
+                                    @else
+                                    <td><input type="input" class="form-control" name="waktuSelesai" value="{{$i+1}}:00" readonly></td>
+                                    @endif
+                                    <td>
+                                        <div class="form-group">
+                                            <select name="petugas" class="form-control">
+                                                <option>Petugas</option>
+                                                @foreach($Petugas as $petugas)
+                                                <option>{{$petugas->nama}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                         <span class="additional"></span>
-                                        <input type="submit" name="submit" class="form-control" value="Login" style="width:75px;">
-                                    </form>
                                 </td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-primary" onclick="add();">Add Petugas</button>
                                 </td>
-
+                                <td>
+                                    <input type="submit" name="submit" class="form-control" value="Submit" style="width:75px;">
+                                    </form>
+                                </td>
                             </tr>
                             @endfor
                         </tbody>
