@@ -33,6 +33,7 @@ Route::get('/inventorySarana', 'MainController@inventorySarana');
 Route::get('/inventoryPetugas', 'MainController@inventoryPetugas');
 Route::get('/schedule', 'MainController@schedule');
 Route::post('/assignSchedule', 'MainController@postAssignSchedule');
+Route::get('/viewSchedule', 'MainController@viewSchedule');
 
 //ADD
 Route::get('/addTPA', 'AddController@getAddTPA');

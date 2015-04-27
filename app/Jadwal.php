@@ -16,7 +16,7 @@ class Jadwal extends Model {
 	//  *
 	//  * @var array
 	//  */
-	protected $fillable = ['tanggal', 'waktuMulai', 'waktuSelesai', 'petugas'];
+	protected $fillable = ['tanggal', 'durasi', 'petugas', 'lokasi'];
 
 	public $timestamps = false;
 

@@ -135,6 +135,9 @@ Use : SB-Admin 1.0.2 template
                     <li>
                         <a href="{{url('schedule')}}"><i class="fa fa-fw fa-calendar"></i> Assign Schedule </a>
                     </li>
+                    <li>
+                        <a href="{{url('viewSchedule')}}"><i class="fa fa-fw fa-calendar"></i> Schedule </a>
+                    </li>
                 </ul>
             </div>
         </nav>

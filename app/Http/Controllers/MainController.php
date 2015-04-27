@@ -56,18 +56,32 @@ use Request;
 			return view('inventoryPetugas')->with('TPA', $TPA)->with('TPS', $TPS)->with('Sarana', $Sarana)->with('Petugas', $Petugas);
 		}
 		public function schedule(){
-			$Jadwal = Jadwal::all();
 			$Petugas = Petugas::all();
+			$TPA = TPA::all();
+			$TPS = TPS::all();
 			$mytime = Carbon::now()->addDay()->toDateString();
-			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas)->with('Jadwal', $Jadwal);
+			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas)->with('TPA', $TPA)->with('TPS', $TPS);
 		}
 		public function postAssignSchedule(){
 			$input = Request::all();
 			$jadwal = new Jadwal();
 			$jadwal->fill($input)->save();
-			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
-			// return response($input);
+
+			$mytime = Carbon::now()->addDay()->toDateString();
+			$Petugas = Petugas::all();
+			$TPA = TPA::all();
+			$TPS = TPS::all();
+			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas)->with('TPA', $TPA)->with('TPS', $TPS);
+			 // return response($input);
 			// return view('login');
+		}
+		public function viewSchedule(){
+			$Petugas = Petugas::all();
+			$TPA = TPA::all();
+			$TPS = TPS::all();
+			$Jadwal = Jadwal::all();
+			$mytime = Carbon::now()->addDay()->toDateString();
+			return view('viewSchedule')->with('Jadwal', $Jadwal)->with('Date', $mytime)->with('Petugas', $Petugas)->with('TPA', $TPA)->with('TPS', $TPS);
 		}
 	}
 ?>
