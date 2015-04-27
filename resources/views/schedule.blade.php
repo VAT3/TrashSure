@@ -33,6 +33,7 @@
                                 <th>Waktu Mulai</th>
                                 <th>Waktu Selesai</th>
                                 <th>Petugas</th>
+                                <th>-</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,12 +47,37 @@
                                 <td>{{$i+1}}:00</td>
                                 @endif
                                 <td>
-                                    <select class="form-control">
-                                        <option>Nama Petugas</option>
-                                        @foreach($Petugas as $petugas)
-                                            <option>{{$petugas->nama}}</option>
-                                        @endforeach
-                                    </select>
+                                    <div id = "readroot">
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>Petugas</option>
+                                                @foreach($Petugas as $petugas)
+                                                <option>{{$petugas->nama}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <span id="writeroot"></span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-primary" onclick="add();">Add Item</button>
+                                        <script type="text/javascript">
+                                            var counter = 0;
+                                            function add(){
+                                                counter++;
+                                                var newFields = document.getElementById('readroot').cloneNode(true);
+                                                newFields.id = '';
+                                                newFields.style.display = 'block';
+                                                var newField = newFields.childNodes;
+                                                for (var i=0;i<newField.length;i++) {
+                                                    var theName = newField[i].name
+                                                    if (theName)
+                                                        newField[i].name = theName + counter;
+                                                }
+                                                var insertHere = document.getElementById('writeroot');
+                                                insertHere.parentNode.insertBefore(newFields,insertHere);
+                                            }
+                                        </script>
                                 </td>
                             </tr>
                             @endfor
