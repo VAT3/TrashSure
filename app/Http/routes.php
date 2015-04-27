@@ -32,7 +32,7 @@ Route::get('/inventoryTPS', 'MainController@inventoryTPS');
 Route::get('/inventorySarana', 'MainController@inventorySarana');
 Route::get('/inventoryPetugas', 'MainController@inventoryPetugas');
 Route::get('/schedule', 'MainController@schedule');
-Route::get('/assignSchedule', 'MainController@postAssignSchedule');
+Route::post('/assignSchedule', 'MainController@postAssignSchedule');
 
 //ADD
 Route::get('/addTPA', 'AddController@getAddTPA');

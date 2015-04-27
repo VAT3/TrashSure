@@ -47,53 +47,39 @@
                                 <td>{{$i+1}}:00</td>
                                 @endif
                                 <td>
-                                    <div id = "readroot">
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option>Petugas</option>
-                                                @foreach($Petugas as $petugas)
-                                                <option>{{$petugas->nama}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <span id="writeroot"></span>
+                                    <form role="form" method="post" action="/assignSchedule">
+                                    <input name="_token" hidden value="{!! csrf_token() !!}" />
+                                            <div class="form-group">
+                                                <!-- <select name="petugas[]" class="form-control">
+                                                    <option>Petugas</option>
+                                                    @foreach($Petugas as $petugas)
+                                                    <option>{{$petugas->nama}}</option>
+                                                    @endforeach
+                                                </select> -->
+                                                <input type="input" class="form-control" id="username" placeholder="Enter username" name="username">
+                                            </div>
+                                        <span class="additional"></span>
+                                        <input type="submit" name="submit" class="form-control" value="Login" style="width:75px;">
+                                    </form>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-primary" onclick="add();">Add Item</button>
-                                        <script type="text/javascript">
-                                            var counter = 0;
-                                            function add(){
-                                                counter++;
-                                                var newFields = document.getElementById('readroot').cloneNode(true);
-                                                newFields.id = '';
-                                                newFields.style.display = 'block';
-                                                var newField = newFields.childNodes;
-                                                for (var i=0;i<newField.length;i++) {
-                                                    var theName = newField[i].name
-                                                    if (theName)
-                                                        newField[i].name = theName + counter;
-                                                }
-                                                var insertHere = document.getElementById('writeroot');
-                                                insertHere.parentNode.insertBefore(newFields,insertHere);
-                                            }
-                                        </script>
+                                    <button type="button" class="btn btn-sm btn-primary" onclick="add();">Add Petugas</button>
                                 </td>
+
                             </tr>
                             @endfor
                         </tbody>
                     </table>
-                    <button type="button" class="btn btn-sm btn-primary" onclick="redirect();">Submit</button>
-                        <script type="text/javascript">
-                        function redirect(){
-                            window.location = "{{url('assignSchedule')}}";
-                        }
-                        </script>
                 </div>
             </div>
         </div>
         <!-- /.row -->
 	</div>
 </div>
-
+<script type="text/javascript">
+    function add(){
+        var tr = '<div class="additional"><div class="form-group"><select name="petugas-{{$i}}[]" class="form-control"><option>Petugas</option>@foreach($Petugas as $petugas)<option>{{$petugas->nama}}</option>@endforeach</select></div></div>';
+        $("span.additional").append(tr);
+    }
+</script>
 @endsection

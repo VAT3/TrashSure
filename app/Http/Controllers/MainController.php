@@ -6,6 +6,7 @@ use App\Sarana;
 use App\Petugas;
 use App\Jadwal;
 use Carbon\Carbon;
+use Request;
 	class MainController extends Controller {
 		public function __construct()
 		{
@@ -58,18 +59,15 @@ use Carbon\Carbon;
 			$Jadwal = Jadwal::all();
 			$Petugas = Petugas::all();
 			$mytime = Carbon::now()->toDateString();
-			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
+			return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas)->with('Jadwal', $Jadwal);
 		}
 		public function postAssignSchedule(){
-			$Jadwal = Jadwal::all();
-			$Petugas = Petugas::all();
-			$mytime = Carbon::now()->toDateString();
-			$TPA = TPA::all();
-			$TPS = TPS::all();
-			$Sarana = Sarana::all();
-			$Petugas = Petugas::all();
+			$input = array();
+			$input = Request::all();
+			$jadwal = new Jadwal();
+			$jadwal->fill($input)->save();
 			// return view('schedule')->with('Date', $mytime)->with('Petugas', $Petugas);
-			return view('overview')->with('TPA', $TPA)->with('TPS', $TPS)->with('Sarana', $Sarana)->with('Petugas', $Petugas);
+			return $input;
 		}
 	}
 ?>
