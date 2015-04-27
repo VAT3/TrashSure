@@ -138,6 +138,9 @@ Use : SB-Admin 1.0.2 template
                     <li>
                         <a href="{{url('viewSchedule')}}"><i class="fa fa-fw fa-calendar"></i> Schedule </a>
                     </li>
+                    <li>
+                        <a href="{{url('isiVolume')}}"><i class="fa fa-fw fa-calendar"></i> Isi Volume </a>
+                    </li>
                 </ul>
             </div>
         </nav>

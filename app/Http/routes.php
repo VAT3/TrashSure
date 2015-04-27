@@ -67,4 +67,6 @@ Route::get('/delTPS/{id}', 'DelController@DelTPS');
 Route::get('/delSarana/{id}', 'DelController@DelSarana');
 Route::get('/delPetugas/{id}', 'DelController@DelPetugas');
 
-//ASSIGN JADWAL
+//ISI VOLUME
+Route::get('/isiVolume', 'MainController@getIsiVolume');
+Route::post('/isiVolume', 'MainController@postIsiVolume');

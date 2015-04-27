@@ -5,7 +5,9 @@ use App\TPS;
 use App\Sarana;
 use App\Petugas;
 use App\Jadwal;
+use App\Quotation;
 use Carbon\Carbon;
+use DB;
 use Request;
 	class MainController extends Controller {
 		public function __construct()
@@ -82,6 +84,32 @@ use Request;
 			$Jadwal = Jadwal::all();
 			$mytime = Carbon::now()->addDay()->toDateString();
 			return view('viewSchedule')->with('Jadwal', $Jadwal)->with('Date', $mytime)->with('Petugas', $Petugas)->with('TPA', $TPA)->with('TPS', $TPS);
+		}
+		public function getIsiVolume() {
+			$tpa = DB::select('SELECT * from tpa');
+			$tps = DB::select('SELECT * from tps');
+			return view('formIsiVolume')->with('tpa', $tpa)->with('tps', $tps);
+		}
+		public function postIsiVolume() {
+			$input = Request::get("lokasi");
+			$volume = Request::get("volume");
+			$tempat = 'tps';
+			/* Cek TPA atau TPS beserta voluemnya */
+			if (sizeof($hasil = (DB::select('SELECT volume from tpa WHERE nama = ?', [$input]))) != 0) {
+				$tempat = 'tpa';
+			}
+			else {
+				$hasil = (DB::select('SELECT volume from tpa WHERE nama = ?', [$input]));
+			}
+
+			$volume = $volume + $hasil[0]->volume;
+
+			DB::table($tempat)
+				-> where ('nama', $input)
+				-> update (['volume' => $volume]);
+			$tpa = DB::select('SELECT * from tpa');
+			$tps = DB::select('SELECT * from tps');
+			return view('formIsiVolume')->with('tpa', $tpa)->with('tps', $tps);
 		}
 	}
 ?>
