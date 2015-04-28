@@ -61,3 +61,5 @@ Route::get('/delTPA/{id}', 'DelController@DelTPA');
 Route::get('/delTPS/{id}', 'DelController@DelTPS');
 Route::get('/delSarana/{id}', 'DelController@DelSarana');
 Route::get('/delPetugas/{id}', 'DelController@DelPetugas');
+
+Route::get('laporan', 'LaporanController@createLaporan');
