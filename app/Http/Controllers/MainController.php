@@ -99,7 +99,7 @@ use Request;
 				$tempat = 'tpa';
 			}
 			else {
-				$hasil = (DB::select('SELECT volume from tpa WHERE nama = ?', [$input]));
+				$hasil = (DB::select('SELECT volume from tps WHERE nama = ?', [$input]));
 			}
 
 			$volume = $volume + $hasil[0]->volume;
@@ -110,6 +110,9 @@ use Request;
 			$tpa = DB::select('SELECT * from tpa');
 			$tps = DB::select('SELECT * from tps');
 			return view('formIsiVolume')->with('tpa', $tpa)->with('tps', $tps);
+		}
+		public function laporan(){
+			return view('laporan');
 		}
 	}
 ?>

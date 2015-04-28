@@ -113,7 +113,7 @@ Use : SB-Admin 1.0.2 template
                         <a href="{{url('TrashSure')}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard </a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-file-o"></i> Laporan </a>
+                        <a href="{{url('laporan')}}"><i class="fa fa-fw fa-file-o"></i> Laporan </a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Inventori <i class="fa fa-fw fa-caret-down"></i></a>

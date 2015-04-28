@@ -31,6 +31,7 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
+                                        <th>Volume</th>
                                         <th> - </th>
                                         <th> - </th>
                                     </tr>
@@ -41,6 +42,7 @@
                                         <td>TPA - {{$tpa->id}}</td>
                                         <td>{{$tpa->nama}}</td>
                                         <td>{{$tpa->lokasi}}</td>
+                                        <td>{{$tpa->volume}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delTPA/'.$tpa->id}}"> Delete</a></td>
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updTPA/'.$tpa->id}}"> Update</a></td>
                                     </tr>

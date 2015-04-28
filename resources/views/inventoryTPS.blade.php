@@ -31,6 +31,7 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
+                                        <th>Volume</th>
                                         <th> - </th>
                                         <th> - </th>
                                     </tr>
@@ -41,6 +42,7 @@
                                         <td>TPS - {{$tps->id}}</td>
                                         <td>{{$tps->nama}}</td>
                                         <td>{{$tps->lokasi}}</td>
+                                        <td>{{$tps->volume}}</td>
                                         <td><i class="fa fa-recycle"></i> <a href="{{'delTPS/'.$tps->id}}"> Delete</a></td>
                                         <td><i class="fa fa-refresh"></i> <a href="{{'updTPS/'.$tps->id}}"> Update</a></td>
                                     </tr>

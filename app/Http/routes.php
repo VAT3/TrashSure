@@ -34,6 +34,7 @@ Route::get('/inventoryPetugas', 'MainController@inventoryPetugas');
 Route::get('/schedule', 'MainController@schedule');
 Route::post('/assignSchedule', 'MainController@postAssignSchedule');
 Route::get('/viewSchedule', 'MainController@viewSchedule');
+Route::get('/laporan', 'MainController@laporan');
 
 //ADD
 Route::get('/addTPA', 'AddController@getAddTPA');
