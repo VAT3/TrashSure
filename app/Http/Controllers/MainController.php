@@ -114,5 +114,19 @@ use Request;
 		public function laporan(){
 			return view('laporan');
 		}
+		public function getPenjadwalanSarana() {
+			$tpa = DB::select('SELECT * from tpa');
+			$tps = DB::select('SELECT * from tps');
+			$sarana = DB::select('SELECT * from sarana');
+			return view('formIsiVolume')->with('tpa', $tpa)->with('tps', $tps)->with('sarana', $sarana);
+		}
+		public function postPenjadwalanSarana() {
+			
+			//return
+			$tpa = DB::select('SELECT * from tpa');
+			$tps = DB::select('SELECT * from tps');
+			$sarana = DB::select('SELECT * from sarana');
+			return view('formIsiVolume')->with('tpa', $tpa)->with('tps', $tps)->with('sarana', $sarana);
+		}
 	}
 ?>
