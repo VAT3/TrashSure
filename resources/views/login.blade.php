@@ -37,6 +37,7 @@
 					<font color="red"> 
 						<?php echo Session::pull('notification'); ?>
 					</font><br><br>
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<input type="submit" name="submit" class="form-control" value="Login" style="width:75px;">
 				</form>
 			</div>
